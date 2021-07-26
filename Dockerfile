@@ -23,7 +23,7 @@ RUN git clone --depth 1 https://github.com/CMU-Perceptual-Computing-Lab/openpose
 
 #build it
 WORKDIR /openpose/build
-RUN cmake -DBUILD_EXAMPLES=ON -DGPU_MODE=CPU_ONLY .. && make -j `nproc`
+RUN cmake -DBUILD_EXAMPLES=ON .. && make -j `nproc`
 
 WORKDIR /openpose/build
 
